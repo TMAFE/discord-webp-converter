@@ -1,0 +1,24 @@
+[
+  {
+    "id": 1,
+    "priority": 1,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "transform": {
+          "queryTransform": {
+            "addOrReplaceParams": [
+              { "key": "format", "value": "png" }
+            ],
+            "removeParams": ["width", "height"]
+          }
+        }
+      }
+    },
+    "condition": {
+      "regexFilter": "^https?://(?:(?:media|cdn)\\.discord(?:app)?\\.(?:com|net))/.*",
+      "resourceTypes": ["image"]
+    }
+  }
+]
+
